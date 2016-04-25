@@ -7,7 +7,6 @@ $(function () {
     //document.writeln("地址类型：" + ILData[3] + "<br />");         //输出接口数据中的IP地址的
     //document.writeln("地址类型：" + ILData[4] + "<br />");         //输出接口数据中的IP地址的运营商
     //console.log("IP地址：" + ILData[0] + "<br />地址类型：" + ILData[1] + "<br />地址类型：" + ILData[2] + "<br />地址类型：" + ILData[3] + "<br />地址类型：" + ILData[4] + "<br />");
-    console.log();
     console.info('您正在使用的浏览器是:' + ua(window.navigator.userAgent) + '   IP：' + returnCitySN["cip"] + ',  地址：' + returnCitySN["cname"]);
 
     if ($(".articlePkid").val() == "index") {
