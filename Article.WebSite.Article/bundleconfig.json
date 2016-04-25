@@ -1,0 +1,26 @@
+[
+  {
+    "outputFileName": "scripts/Home.js",
+    "inputFiles": [
+      "scripts/Home.js"
+    ]
+  },
+  {
+    "outputFileName": "Css/Home.css",
+    "inputFiles": [
+      "Css/Home.css"
+    ]
+  },
+  {
+    "outputFileName": "scripts/CategoryHtml/CategoryFunction.js",
+    "inputFiles": [
+      "scripts/CategoryHtml/CategoryFunction.js"
+    ]
+  },
+  {
+    "outputFileName": "scripts/Public/Public.js",
+    "inputFiles": [
+      "scripts/Public/Public.js"
+    ]
+  }
+]

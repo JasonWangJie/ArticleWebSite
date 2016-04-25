@@ -1,0 +1,210 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta property="qc:admins" content="1453334225736513063670755716450" />
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width" />
+    <title>恕我直言，在座各位都是辣鸡</title>
+    <link rel="shortcut icon" href="~/Images/titlleImage.jpg">
+    <link href="~/Css/Home.min.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+    <script src="~/scripts/Home.min.js"></script>
+    <script src="~/scripts/jquery.easing.js"></script>
+    <script src="~/scripts/Public/Public.min.js"></script>
+    <script src="~/scripts/jquery.pjax.js"></script>
+    @*<script src="~/scripts/CategoryHtml/CategoryFunction.js"></script>*@
+	@*<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="APPID" data-redirecturi="REDIRECTURI" charset="utf-8"></script>
+        <script type="text/javascript">
+        QC.Login({
+           btnId:"qqLoginBtn"    //插入按钮的节点id
+    });
+    </script>*@
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    @*<div class="loginHeader" style="width:100%">
+        <b>代码改变世界</b>
+       
+    </div>*@
+    <header class="header">
+        <input type="text" class="articlePkid" style="display:none" value="index" />
+        
+        <div class="nva">
+            <ul class="list">
+                <li class="Log" width="10%">
+                    <a href="http://wwwblogs.uicp.cn/Home/Index"></a>
+                    <b>都是辣鸡</b>
+                </li>
+                <li class="index" width="10%">
+                    <a href="http://wwwblogs.uicp.cn/Home/Index" class="parent">
+                        <b>首页</b>
+                        <i>Index</i>
+                    </a>
+                </li>
+                <li width="10%">
+                    <a href="Java.html" class="parent">
+                        <b>.Net</b>
+                        <i>Net</i>
+                    </a>
+                    <div class="down" style="display: none">
+                        <a href="#">数据加载失败…</a>
+                    </div>
+                </li>
+                <li width="10%">
+                    <a href="Net.html" class="parent">
+                        <b>编程语言</b>
+                        <i>语言选择</i>
+                    </a>
+                    <div class="down" style="display: none">
+                        <a href="#">数据加载失败…</a>
+                    </div>
+                </li>
+                <li width="10%">
+                    <a href="Android.html" class="parent">
+                        <b>移动开发</b>
+                        <i>IOS/Android</i>
+                    </a>
+                    <div class="down" style="display: none">
+                        <a href="#">数据加载失败…</a>
+                    </div>
+                </li>
+                <li width="10%">
+                    <a href="IOS.html" class="parent">
+                        <b>Web前端</b>
+                        <i>前端</i>
+                    </a>
+                    <div class="down" style="display: none">
+                        <a href="#">数据加载失败…</a>
+                    </div>
+                </li>
+                <li width="10%">
+                    <a href="Other.html" class="parent">
+                        <b>其他</b>
+                        <i>畅所欲言</i>
+                    </a>
+                    <div class="down" style="display: none">
+                        <a href="#">数据加载失败…</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <form method="get" class="search-form" action="javascript:void(0);">
+            <input class="search-input" id="search_input" name="q" type="text" placeholder="输入关键字搜索" autofocus="" x-webkit-speech=""><input class="btn btn-primary search-submit" type="button" value="搜索">
+        </form>
+        <b class="logreg"><b class="login"><img src="~/Images/login.png" /></b>&nbsp;&nbsp;<b class="regist"><img src="~/Images/regist.png" /></b></b>
+		<span id="qqLoginBtn"></span>
+    </header>
+    <section class="focus">
+        <div class="central">
+            <div class="toptip">
+                恕我直言，在座各位都是辣鸡(*^__^*) -- Jason
+            </div>
+        </div>
+    </section>
+    <section class="central container">
+        <div class="content-wrap">
+
+            <div class="content">
+                <article class="excerpt  cate1 auth1">
+                    <div class="mask">
+                        <img src="~/Images/Backgroudimage.jpg" />
+                    </div>
+                    @*<h2>
+                            <a href="javascript:void(0);" fragment="fragment/content/19.html" title="Memcached分布式锁">Memcached分布式锁</a>
+                        </h2>
+
+                        <div class="info">
+                            <span class="spndate">2016-02-17 22:08:29</span><span class="spnname">XXX</span><span class="spncomm">暂未开启评论功能</span><span class="spnview">87次浏览</span>
+                        </div>
+                        <div class="note">
+                            <p>
+                            </p><p>分布式缓存，能解决单台服务器内存不能无限扩张的瓶颈。在分布式缓存的应用中，会遇到多个客户端同时争用的问题。这个时候，需要用到分布式锁，得到锁的客户端才有操作权限。</p>
+                            <p>Memcached 和 Redis 是常用的分布式缓存构建方案，下面举例基于Memcached 的分布式锁的实现方法。</p>
+                            <p><strong>Memcached&nbsp;分布式锁</strong></p>
+                            <p>
+                                <strong>Memcached</strong> 可以使用 <strong>add</strong> 命令，该命令只有KEY<strong>不存在</strong>时，才进行添加，或者...
+
+                            </p>
+
+                            <p class="readmore">
+                                <a href="javascript:void(0);" fragment="fragment/content/19.html" title="Memcached分布式锁">阅读全文</a>
+                            </p>
+                        </div>*@
+                </article>
+            </div>
+            <div class="paging">
+                <span class="page now-page">1</span>
+                @*<a href="javascript:void(0);" conditiontype="js_page" conditionval="2" fragment="fragment/index.html"><span class="page">2</span></a>
+                <a href="javascript:void(0);"><span class="page">...</span></a>
+                <a href="javascript:void(0);" conditiontype="js_page" conditionval="5" fragment="fragment/index.html"><span class="page">5</span></a>*@
+            </div>
+        </div>
+        <aside class="sidebar">
+            <div class="widget widget_divCatalog">
+                <h3 class="widget_tit">文章分类</h3>
+                <div>
+                    <ul id="blog_type_js"><li class="li-cate cate-10001"><a href="javascript:void(0);" conditiontype="js_type" conditionval="35" fragment="fragment/index.html" title="一些技术上的交流啊  经验啊什么的">技术交流<span class="article-nums">(1)</span></a></li></ul>
+                </div>
+            </div>
+            <div class="widget widget_divAboutKen">
+                <h3 class="widget_tit">热门文章</h3>
+                <div>
+                    <ul id="blog_rnd_js"><li style="text-overflow: ellipsis;"><a href="javascript:void(0);" fragment="fragment/content/19.html" title="Memcached分布式锁  阅读量:87">Memcached分布式锁</a></li></ul>
+                </div>
+            </div>
+            <div class="widget widget_divFavorites">
+                <h3 class="widget_tit">热门标签</h3>
+                <div>
+                    <ul id="tag_top_js"><li style="text-overflow: ellipsis;"><a conditiontype="js_tag" conditionval="22" href="javascript:void(0);" fragment="fragment/index.html" title="memcached">memcached(1)</a></li></ul>
+                </div>
+            </div>
+            <div class="widget widget_divLinkage">
+                <h3 class="widget_tit">友情链接</h3>
+                <div>
+                    <ul id="index_link_list_js">
+                        <li style="text-overflow: ellipsis;"><a target="_blank" href="http://www.baidu.com" title="YYYYY">MavenXXXX</a></li>
+                        <li style="text-overflow: ellipsis;"><a target="_blank" href="http://www.baidu.com" title="YYYYY">XXXXX</a></li>
+                        <li style="text-overflow: ellipsis;"><a target="_blank" href="http://www.baidu.com" title="YYYYY">开放平台</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="widget widget_divAboutKen Mobilebrowsing">
+                <h3 class="widget_tit">移动浏览</h3>
+                <div class="PhoneWatch">
+                    <img id="qrcodeScan" height="100%" width="100%" src="~/Images/PhoneWatch.png" />
+                    <ul>
+                        <li style="text-align: center;"><strong>扫一扫在手机继续浏览本页</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <section class="showlinks">
+        <div class="central">
+            <ul class="showlink"></ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="central">
+            <div class="copyright">
+                Copyright&nbsp;&nbsp;(c)&nbsp;&nbsp;<a href="/Home/Index" target="_top">Jason.W</a> <a href="http://www.baidu.com" target="_blank" style="float: right;" title="">
+                    The Legendary Swordsman
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="rollto" style="display: block;">
+        <a class="ico ico-totop" title="回顶部"></a>
+    </div>
+    <div class="mask none">
+        @*<img src="~/Images/llTop.png" /><img src="~/Images/llTop.png" />*@
+    </div>
+</body>
+</html>
