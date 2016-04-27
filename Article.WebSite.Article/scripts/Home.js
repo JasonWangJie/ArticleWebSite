@@ -38,7 +38,7 @@ $(function () {
 
                     $.each(hotLabel, function (index, item) {
                         var Label = item.BestLabel;
-                        hotLabelHtml += '<li style="text-overflow: ellipsis;"><a href="javascript:void(0)" data-label="' + item.BestLabel + '" onclick="SelectArticleForC(this)"  title="' + Label + '">' + Label + '</a></li>';
+                        hotLabelHtml += '<li style="text-overflow: ellipsis;"><a href="javascript:void(0)" data-label="' + item.BestLabel + '" onclick="SelectArticleForC(this)"  title="' + Label + '">' + Label + '('+item.LabelCount+')'+'</a></li>';
                     });
                     //文章所有分类
                     var articleCategory = data["articleCategory"],
@@ -82,14 +82,12 @@ $(function () {
             $.ajax({
                 type: "get",
                 data: "",
-                url: 'http://api.washmore.tech/ip?ip=' + ip + '&type=all',
+                url: 'http://ip.taobao.com/service/getIpInfo.php?ip=' + ip,
                 dataType: "jsonp",
                 jsonp: "callback",
-                success: function (data) {
-                    console.log(idata);
-                    var ipData = '';
-                    ipData.join('');
-                    console.log(ipData);
+                success: function (idata) {
+                    console.log(idata["data"]);
+                    alert(idata["data"]);
                 }
             });
         });
