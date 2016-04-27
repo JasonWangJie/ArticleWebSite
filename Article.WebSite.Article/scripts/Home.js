@@ -87,7 +87,7 @@ $(function () {
                 jsonp: "callback",
                 success: function (idata) {
                     console.log(idata["data"]);
-                    alert(idata["data"]);
+                    //alert(idata["data"]);
                 }
             });
         });
