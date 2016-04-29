@@ -66,7 +66,7 @@ $(function () {
                     var isComment = "已开启评论功能";
                     if (item.IsComment == false)
                         isComment = "暂未开启评论功能";
-                    htmlCode += '<article class="excerpt"><h2><a href="#" onclick="ArticleDetail(' + item.Pkid + ')" data-pkid="' + item.Pkid + '" fragment="' + item.ContentUrl + '" title="' + item.SmallTitlle + '">' + item.SmallTitlle + '</a></h2><div class="info"><span class="spndate">' + item.PublishDateTime + '</span><span class="spnname">' + item.UserName + '</span><span class="spncomm">' + isComment + '</span><span class="spnview">' + item.ClickCount + '次浏览</span></div><div class="note"><p></p><p>' + item.SmallContent + '</p><p class="readmore"><a href="#"  onclick="ArticleDetail(' + item.Pkid + ')" class="readfull" title="' + item.SmallTitlle + '">阅读全文</a></p></div></article>';;
+                    htmlCode += '<article class="excerpt"><h2><a href="javascript:void(0)" onclick="ArticleDetail(' + item.Pkid + ')" data-pkid="' + item.Pkid + '" fragment="' + item.ContentUrl + '" title="' + item.SmallTitlle + '">' + item.SmallTitlle + '</a></h2><div class="info"><span class="spndate">' + item.PublishDateTime + '</span><span class="spnname">' + item.UserName + '</span><span class="spncomm">' + isComment + '</span><span class="spnview">' + item.ClickCount + '次浏览</span></div><div class="note"><p></p><p>' + item.SmallContent + '</p><p class="readmore"><a href="#"  onclick="ArticleDetail(' + item.Pkid + ')" class="readfull" title="' + item.SmallTitlle + '">阅读全文</a></p></div></article>';;
                 });
                 $(".central .content-wrap .content").empty().html(htmlCode)//文章详情
             } else {
