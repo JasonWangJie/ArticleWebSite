@@ -25,13 +25,13 @@ $(function () {
                         var isComment = "已开启评论功能";
                         if (item.IsComment == false)
                             isComment = "暂未开启评论功能";
-                        htmlCode += '<article class="excerpt"><h2><a href="#" onclick="ArticleDetail(' + item.Pkid + ')" data-pkid="' + item.Pkid + '" fragment="' + item.ContentUrl + '" title="' + item.SmallTitlle + '">' + item.SmallTitlle + '</a></h2><div class="info"><span class="spndate">' + item.PublishDateTime + '</span><span class="spnname">' + item.UserName + '</span><span class="spncomm">' + isComment + '</span><span class="spnview">' + item.ClickCount + '次浏览</span></div><div class="note"><p></p><p>' + item.SmallContent + '</p><p class="readmore"><a href="#"  onclick="ArticleDetail(' + item.Pkid + ')" class="readfull" title="' + item.SmallTitlle + '">阅读全文</a></p></div></article>';
+                        htmlCode += '<article class="excerpt"><h2><a href="javascript:void(0)" onclick="ArticleDetail(' + item.Pkid + ')" data-pkid="' + item.Pkid + '" fragment="' + item.ContentUrl + '" title="' + item.SmallTitlle + '">' + item.SmallTitlle + '</a></h2><div class="info"><span class="spndate">' + item.PublishDateTime + '</span><span class="spnname">' + item.UserName + '</span><span class="spncomm">' + isComment + '</span><span class="spnview">' + item.ClickCount + '次浏览</span></div><div class="note"><p></p><p>' + item.SmallContent + '</p><p class="readmore"><a href="#"  onclick="ArticleDetail(' + item.Pkid + ')" class="readfull" title="' + item.SmallTitlle + '">阅读全文</a></p></div></article>';
                     });
                     var hotArticle = data["hotArticle"],//热门文章
                        hotArticleHtml = '';
                     //http://blogs.uicp.cn/ArticlePage/ArticleDetail?pkId=' + item.PKID + '
                     $.each(hotArticle, function (index, item) {
-                        hotArticleHtml += '<li style="text-overflow: ellipsis;"><a href="#"  onclick="ArticleDetail(' + item.PKID + ')" class="hotArticleButton" data-pkid="' + item.PKID + '" fragment="" title="' + item.SmallTittle + '  阅读量:' + item.ClickCount + '">' + item.SmallTittle + '</a></li>';
+                        hotArticleHtml += '<li style="text-overflow: ellipsis;"><a href="javascript:void(0)"  onclick="ArticleDetail(' + item.PKID + ')" class="hotArticleButton" data-pkid="' + item.PKID + '" fragment="" title="' + item.SmallTittle + '  阅读量:' + item.ClickCount + '">' + item.SmallTittle + '</a></li>';
                     });
                     var hotLabel = data["hotLabel"], //热门标签
                         hotLabelHtml = '';
@@ -44,13 +44,13 @@ $(function () {
                     var articleCategory = data["articleCategory"],
                         articleCategoryHtml = '<li class="Log" width="10px"><a href="' + HomeIndex + '"></a><b>都是辣鸡</b></li><li class="index"><a href="' + HomeIndex + '" class="parent"><b>首页</b><i>Index</i></a></li>';
                     $.each(articleCategory, function (index, item) {//' + item.CategoryUrl + '
-                        articleCategoryHtml += ' <li><a href="#" onclick="CategoryClick()" class="parent"><b>' + item.Category + '</b><i>' + item.CategoryAlias + '</i></a><div class="down" id="' + item.Pkid + '" style="display: none"></div></li>'
+                        articleCategoryHtml += ' <li><a href="javascript:void(0)" onclick="CategoryClick()" class="parent"><b>' + item.Category + '</b><i>' + item.CategoryAlias + '</i></a><div class="down" id="' + item.Pkid + '" style="display: none"></div></li>'
                         $.post("/Home/SelectCategoryChild", "pkId=" + item.Pkid, function (datas) {
                             if (datas) {
                                 var articleCategoryChild = datas["articleCategoryChild"],
                                     articleCategoryChildHtml = '';
                                 $.each(articleCategoryChild, function (indexs, itemChild) {//' + itemChild.CategoryUrl + '
-                                    articleCategoryChildHtml = '<a href="#"  onclick="CategoryClick()" >' + itemChild.Category + '</a>';
+                                    articleCategoryChildHtml = '<a href="javascript:void(0)"  onclick="CategoryClick()" >' + itemChild.Category + '</a>';
                                     $(".nva .list #" + item.Pkid).append(articleCategoryChildHtml);
                                 });
                             } else {
@@ -114,7 +114,7 @@ function SelectArticleForC(Best) {
                 var isComment = "已开启评论功能";
                 if (item.IsComment == false)
                     isComment = "暂未开启评论功能";
-                htmlCode += '<article class="excerpt"><h2><a href="#" onclick="ArticleDetail(' + item.Pkid + ')" data-pkid="' + item.Pkid + '" fragment="' + item.ContentUrl + '" title="' + item.SmallTitlle + '">' + item.SmallTitlle + '</a></h2><div class="info"><span class="spndate">' + item.PublishDateTime + '</span><span class="spnname">' + item.UserName + '</span><span class="spncomm">' + isComment + '</span><span class="spnview">' + item.ClickCount + '次浏览</span></div><div class="note"><p></p><p>' + item.SmallContent + '</p><p class="readmore"><a href="#"  onclick="ArticleDetail(' + item.Pkid + ')" class="readfull" title="' + item.SmallTitlle + '">阅读全文</a></p></div></article>';;
+                htmlCode += '<article class="excerpt"><h2><a href="javascript:void(0)" onclick="ArticleDetail(' + item.Pkid + ')" data-pkid="' + item.Pkid + '" fragment="' + item.ContentUrl + '" title="' + item.SmallTitlle + '">' + item.SmallTitlle + '</a></h2><div class="info"><span class="spndate">' + item.PublishDateTime + '</span><span class="spnname">' + item.UserName + '</span><span class="spncomm">' + isComment + '</span><span class="spnview">' + item.ClickCount + '次浏览</span></div><div class="note"><p></p><p>' + item.SmallContent + '</p><p class="readmore"><a href="#"  onclick="ArticleDetail(' + item.Pkid + ')" class="readfull" title="' + item.SmallTitlle + '">阅读全文</a></p></div></article>';;
             });
             $(".central .content-wrap .content").empty().html(htmlCode)//文章详情
         } else
